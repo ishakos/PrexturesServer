@@ -2,9 +2,6 @@
 const cron = require("node-cron");
 const Users = require("./models/UsersModel");
 
-const cors = require("cors");
-app.use(cors());
-
 // Schedule a task to run every day at midnight
 cron.schedule("0 0 * * *", async () => {
   try {

@@ -1,8 +1,5 @@
 const mongoose = require("mongoose");
 
-const cors = require("cors");
-app.use(cors());
-
 const PredictionSchema = new mongoose.Schema({
   fixtureNumber: {
     type: Number,

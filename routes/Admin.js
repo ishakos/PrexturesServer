@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const cors = require("cors");
-app.use(cors());
+router.use(cors());
 
 require("dotenv").config();
 const SECRET3 = process.env.SECRET3;

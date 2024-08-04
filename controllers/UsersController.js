@@ -2,9 +2,6 @@
 
 const Users = require("../models/UsersModel");
 
-const cors = require("cors");
-app.use(cors());
-
 const getUsers = async (req, res) => {
   try {
     const users = await Users.find({});
