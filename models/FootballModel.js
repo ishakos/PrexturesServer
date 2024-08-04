@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+const cors = require("cors");
+app.use(cors());
+
 const teamsSchema = new mongoose.Schema(
   {
     name: {

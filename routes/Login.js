@@ -6,6 +6,9 @@ const bcrypt = require("bcrypt");
 let nodemailer = require("nodemailer");
 const { validateToken } = require("../controllers/AuthController");
 
+const cors = require("cors");
+app.use(cors());
+
 require("dotenv").config();
 const SECRET1 = process.env.SECRET;
 const GMAIL_PASS = process.env.GMAIL_PASS;

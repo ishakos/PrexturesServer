@@ -3,6 +3,9 @@
 const { verify } = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+const cors = require("cors");
+app.use(cors());
+
 require("dotenv").config();
 const secret = process.env.SECRET;
 const secret3 = process.env.SECRET3;

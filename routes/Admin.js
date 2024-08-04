@@ -5,6 +5,9 @@ const { validateAdmin } = require("../controllers/AuthController");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+const cors = require("cors");
+app.use(cors());
+
 require("dotenv").config();
 const SECRET3 = process.env.SECRET3;
 const admin = process.env.ADMIN;

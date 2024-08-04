@@ -7,6 +7,9 @@ const { getUsers } = require("../controllers/UsersController");
 const jwt = require("jsonwebtoken");
 let nodemailer = require("nodemailer");
 
+const cors = require("cors");
+app.use(cors());
+
 router.get("/", getUsers);
 
 require("dotenv").config();

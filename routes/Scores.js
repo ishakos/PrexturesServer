@@ -4,6 +4,9 @@ const { Team, Match, Fixture } = require("../models/FootballModel");
 const Users = require("../models/UsersModel");
 const { validateToken } = require("../controllers/AuthController");
 
+const cors = require("cors");
+app.use(cors());
+
 require("dotenv").config();
 const SECRET1 = process.env.SECRET;
 const GMAIL_PASS = process.env.GMAIL_PASS;
