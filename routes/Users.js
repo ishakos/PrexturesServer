@@ -16,7 +16,7 @@ require("dotenv").config();
 const SECRET2 = process.env.SECRET2;
 const gmailpass = process.env.GMAIL_PASS;
 const gmail = process.env.GMAIL;
-const DOMAIN = "http://ishakos.github.io/Prextures";
+const DOMAIN = "https://prextures.vercel.app";
 
 //add user
 router.post("/", async (req, res) => {
