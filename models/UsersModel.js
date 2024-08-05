@@ -41,7 +41,7 @@ const UsersSchema = mongoose.Schema(
     verified: {
       type: Boolean,
       required: false,
-      default: true,
+      default: false,
     },
   },
   {
