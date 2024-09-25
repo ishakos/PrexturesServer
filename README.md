@@ -30,3 +30,5 @@
 //add these: import {getStorage} from 'firebase/storage'
 const storage = getStorage(app);
 //ne7i analystic function
+
+//if env vars are undefined, make sure gitignore is inside the root directory
