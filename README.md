@@ -1,34 +1,90 @@
-1-ida bdit project jdid, rigel berk ur new db infos f env file
+# Prextures – Backend API ⚽
 
-2-.env file fih sensitive information, used that method for security
+Prextures is a full-stack football prediction platform where users predict **Premier League match results for the 2023–2024 season**.
 
-3-if u create .env file, add '.env' da5el .gitignore file
+This repository contains the **backend REST API**, responsible for authentication, prediction logic, match results processing, and league standings calculation.
 
-4-to access the stored infos li rahom f .env, read config.js file
+---
 
-//type npm init -y f server
+## 🏗 Backend Role
 
-//dir f package.json inside scripts ==> "start": "node index.js"
+The backend acts as the **core system** of Prextures and is responsible for:
 
-//npm start
+- User authentication and authorization
+- Storing and validating user predictions
+- Enforcing prediction deadlines (locked at match kickoff)
+- Processing official match results
+- Evaluating predictions (correct / incorrect)
+- Calculating and updating league standings
+- Exposing secure REST APIs for frontend and admin panel consumption
 
-//create the .gitignore file w semih manually w ekteb da5lo node_modules
+---
 
-//npm i nodemon -D (live server chghol)
+## 🧠 Business Logic Highlights
 
-//f scripts bedel hdik start ==> "start": "nodemon index.js"
+- ⏱ **Prediction Locking**  
+  Predictions cannot be created or modified once the match start time is reached.
 
-//npm install cors / express / node-cron / mongoose / mongodb /
-//npm install jsonwebtoken / nodemailer
+- ✅ **Result Evaluation**  
+  Predictions are automatically evaluated after match results are submitted.
 
-//after changing my local dns to 8.8.8.8 / 8.8.4.4, it connected to db
+- 🏅 **Standings Calculation**  
+  User rankings are dynamically updated based on prediction accuracy.
 
-//npm install firebase (client + server)
-//npm install -g firebase-tools (server)
-//to setup firebase, new project, storage get started, region europe, rules = true instead of false
-//roh project settings, general, lta7t dir l sdk configuration w copiyi kolech and paste it f index.js
-//add these: import {getStorage} from 'firebase/storage'
-const storage = getStorage(app);
-//ne7i analystic function
+- 🔐 **Role-Based Access Control**  
+  - Users: submit predictions, view results and standings  
+  - Admins: manage fixtures and submit official results (via Admin Panel)
 
-//if env vars are undefined, make sure gitignore is inside the root directory
+---
+
+## 🧱 Architecture Overview
+
+- **API Type**: RESTful
+- **Clients**:
+  - User-facing Frontend (Prextures)
+  - Admin Panel (Prextures-Admin)
+- **Authentication**: Token-based (JWT)
+- **Data Persistence**: Database-backed storage
+
+---
+
+## 🛠 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB / PostgreSQL *(adjust if needed)*
+- JWT Authentication
+- RESTful API design
+
+---
+
+## 📡 API Responsibilities
+
+The API provides endpoints for:
+
+- Authentication (register / login)
+- Fixture retrieval
+- Prediction submission and validation
+- Prediction history retrieval
+- Match result submission (admin-only)
+- Standings and leaderboard data
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/Prextures-Server.git
+
+# Navigate into the project
+cd Prextures-Server
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+cp .env.example .env
+
+# Start development server
+npm run dev
