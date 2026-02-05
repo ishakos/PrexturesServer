@@ -52,7 +52,7 @@ The backend acts as the **core system** of Prextures and is responsible for:
 
 - Node.js
 - Express.js
-- MongoDB / PostgreSQL *(adjust if needed)*
+- MongoDB 
 - JWT Authentication
 - RESTful API design
 
