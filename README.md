@@ -33,7 +33,7 @@ The backend acts as the **core system** of Prextures and is responsible for:
 
 - 🔐 **Role-Based Access Control**  
   - Users: submit predictions, view results and standings  
-  - Admins: manage fixtures and submit official results (via Admin Panel)
+  - Admins: manage fixtures and submit official match results (via Admin Panel)
 
 ---
 
@@ -44,7 +44,7 @@ The backend acts as the **core system** of Prextures and is responsible for:
   - User-facing Frontend (Prextures)
   - Admin Panel (Prextures-Admin)
 - **Authentication**: Token-based (JWT)
-- **Data Persistence**: Database-backed storage
+- **Data Persistence**: MongoDB
 
 ---
 
@@ -52,7 +52,7 @@ The backend acts as the **core system** of Prextures and is responsible for:
 
 - Node.js
 - Express.js
-- MongoDB 
+- MongoDB
 - JWT Authentication
 - RESTful API design
 
@@ -75,9 +75,7 @@ The API provides endpoints for:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/Prextures-Server.git
-
-# Navigate into the project
+git clone https://github.com/ishakos/Prextures-Server.git
 cd Prextures-Server
 
 # Install dependencies
